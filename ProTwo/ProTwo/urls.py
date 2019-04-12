@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^$',views.index,name='index'),
     url(r'^admin/', admin.site.urls),
     # url(r'^hello',include('AppTwo.urls')),
-    url(r'^help/',include('AppTwo.urls')),
+    url(r'^users/',include('AppTwo.urls')),
 ]

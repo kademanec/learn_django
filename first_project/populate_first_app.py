@@ -1,11 +1,12 @@
 import os
-os.environ.setdefualt('DJANGO_SETTINGS_MODULE','first_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE','first_project.settings')
 
 import django
 django.setup()
 
 import random
-from first_app.models import AccessRecord,Webpage,topic
+from first_app.models import AccessRecord,Webpage,Topic
+from faker import Faker
 
 fakegen=Faker()
 topics = ['Search','Social','Marketplace','News','Games']
@@ -33,7 +34,7 @@ def populate(N=5):
 
         acc_rec = AccessRecord.objects.get_or_create(name=webpg,date=fake_date)[0]
 
-if __name__=='__main__':
+if __name__ == '__main__':
     print("populating script!")
     populate(20)
     print("populating Complete!!")

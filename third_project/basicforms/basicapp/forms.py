@@ -22,7 +22,7 @@ class FormName(forms.Form):
     #     return botcatcher
 
     def clean(self):
-        all_clean_data = super().clean()
+        all_clean_data = super.clean()
         email = all_clean_data['email']
         vmail = all_clean_data['vmail']
 

@@ -19,8 +19,8 @@ from AppTwo import views
 from django.conf.urls import include
 
 urlpatterns = [
+
     url(r'^$',views.index,name='index'),
-    url(r'^admin/', admin.site.urls),
-    # url(r'^hello',include('AppTwo.urls')),
     url(r'^users/',include('AppTwo.urls')),
+    url(r'^admin/', admin.site.urls),
 ]
